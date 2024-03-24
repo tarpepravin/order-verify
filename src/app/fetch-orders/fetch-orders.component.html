@@ -1,0 +1,29 @@
+<div>
+  <div class="card-body">
+    <div id="fetchOrdersButton" class="fetch-orders-button">
+    <button class="btn btn-primary btn-lg" (click)="fetchOrders()">
+      Fetch Purchase Orders
+    </button>
+  </div>
+
+  <div *ngIf="!ordersFetched" class="alert alert-info info-notification" id="userInfo">
+    <span> Click on the button to fetch orders. </span>
+  </div>
+
+  <div id="rawOrdersGrid" class="content raw-orders-grid-container" style="width: 100%; height: 100%"
+    *ngIf="ordersFetched">
+    <!-- The AG Grid component, with Dimensions, CSS Theme, Row Data, and Column Definition -->
+    <ag-grid-angular
+      [ngbTooltip]="tooltipText"
+      class="raw-orders-grid"
+      (rowClicked)="onSelectionChanged($event)"
+      [rowSelection]="rowSelection"
+      [class]="themeClass"
+      [rowData]="rowData"
+      [columnDefs]="colDefs"
+      [pagination]="true"
+    >
+    </ag-grid-angular>
+  </div>
+  </div>
+</div>

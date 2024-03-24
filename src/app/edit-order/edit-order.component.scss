@@ -1,0 +1,33 @@
+// .col-sm-6 {
+//   border: 2px solid orange;
+// }
+
+.edit-order-container {
+  width: 90vw;
+  height: 75vh; 
+  margin: auto;
+}
+
+.highlight-red {
+  border: 2px solid red !important;
+}
+
+.float-right {
+  float: right;
+}
+
+.edit-icon {
+  background: transparent url("../../assets/icons/pen-to-sqaure.svg") no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.circle-check {
+  background: transparent url("../../assets/icons/circle-check.svg") no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
